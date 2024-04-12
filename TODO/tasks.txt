@@ -1,0 +1,5 @@
+0. eat
+1. sit
+2. stand
+3. bore
+4. go
