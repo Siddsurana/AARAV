@@ -121,7 +121,8 @@ if __name__ == "__main__":
                             speak("Perfect, sir")
                         elif "thank you" in query:
                             speak("you are welcome, sir")
-                        #who are you what is your name
+                        elif "who are you" in query:
+                            speak("My name is AARAV as Advanced Artificial Response and Voice")
                         elif "start scrolling up" in query:
                             speak("Scrolling up Sir!")
                             threading.Thread(target=scroll_control.start_scroll_up).start()
@@ -269,7 +270,7 @@ if __name__ == "__main__":
                                     file.close()
                         elif "show my schedule" in query:
                             try:
-                                with open("tasks.txt", "r") as file:
+                                with open("TODO\\tasks.txt", "r") as file:
                                     tasks = file.readlines()
                                     if tasks:
                                         speak("Your schedule for today is as follows:")
