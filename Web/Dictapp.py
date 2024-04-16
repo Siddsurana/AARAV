@@ -20,7 +20,7 @@ def openappweb(query):
     speak("Launching, sir")
     if ".com" in query or ".co.in" in query or ".org" in query:
         query = query.replace("open","")
-        query = query.replace("jarvis","")
+        query = query.replace("aarav","")
         query = query.replace("launch","")
         query = query.replace(" ","")
         webbrowser.open(f"https://www.{query}")

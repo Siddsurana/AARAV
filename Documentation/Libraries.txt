@@ -1,0 +1,33 @@
+Libraries - to import
+
+OpenCV - CV2
+OS
+Face_recognition
+pyttsx3
+speech_recognition
+requests
+bs4
+BeautifulSoup
+datetime
+pyautogui
+threading
+plyer
+Automation.scroll 
+scrollcontrol 
+webbrowser
+twilio
+client
+pynput
+keyboard
+thread
+wolframaplpha
+time
+smtplib
+timedelta
+tkinter
+scrolledText
+numpy 
+PIL
+image
+json
+wikipedia

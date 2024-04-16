@@ -2,10 +2,6 @@ import pywhatkit
 import pyttsx3
 import datetime
 import speech_recognition
-import webbrowser
-from bs4 import BeautifulSoup
-from time import sleep
-import os 
 from datetime import timedelta
 from datetime import datetime
 engine = pyttsx3.init("sapi5")

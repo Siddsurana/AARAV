@@ -318,10 +318,13 @@ if __name__ == "__main__":
                                 website_choice = takeCommand().lower()
                                 if "amazon" in website_choice:
                                     amazon()
+                                    break
                                 elif "flipkart" in website_choice:
                                     flipkart()
+                                    break
                                 elif "myntra" in website_choice:
                                     Myntra()
+                                    break
                                 else:
                                     print("Please choose a valid website.")
                                     speak("Please choose a valid website.")
