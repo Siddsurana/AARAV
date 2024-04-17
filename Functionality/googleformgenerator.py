@@ -290,7 +290,7 @@ def forms():
         elif selected_type[1] == 2:
             pyautogui.click(1957,1166)
             time.sleep(1)
-            pyautogui.click(1957,1166)
+            pyautogui.click(2055,791)
         elif selected_type[1] == 3:
             pyautogui.click(1957,1166)
             time.sleep(1)
@@ -328,56 +328,56 @@ def forms():
             time.sleep(1)
             pyautogui.click(1949,1786) 
         time.sleep(3)
-        pyautogui.click(2346,932)
+        pyautogui.click(2351,1112)
         time.sleep(1)
         pyautogui.write(q[2])
         time.sleep(1)    
         if selected_type[2] == 1:
-            pyautogui.click(1994,868)
+            pyautogui.click(1994,1466)
             time.sleep(1)
             pyautogui.click(1952,680)
         elif selected_type[2] == 2:
-            pyautogui.click(1994,868)
+            pyautogui.click(1994,1466)
             time.sleep(1)
             pyautogui.click(2055,791)
         elif selected_type[2] == 3:
-            pyautogui.click(1994,868)
+            pyautogui.click(1994,1466)
             time.sleep(1)
             pyautogui.click(2044,914)
         elif selected_type[2] == 4:
-            pyautogui.click(1994,868)
+            pyautogui.click(1994,1466)
             time.sleep(1)
             pyautogui.click(1959,1014)
         elif selected_type[2] == 5:
-            pyautogui.click(1994,868)
+            pyautogui.click(1994,1466)
             time.sleep(1)
             pyautogui.click(1938,1101)
         elif selected_type[2] == 6:
-            pyautogui.click(1994,868)
+            pyautogui.click(1994,1466)
             time.sleep(1)
             pyautogui.click(1916,1242)
         elif selected_type[2] == 7:
-            pyautogui.click(1994,868)
+            pyautogui.click(1994,1466)
             time.sleep(1)
             pyautogui.click(1953,1362)
         elif selected_type[2] == 8:
-            pyautogui.click(1994,868)
+            pyautogui.click(1994,1466)
             time.sleep(1)
             pyautogui.click(1983,1467)
         elif selected_type[2] == 9:
-            pyautogui.click(1994,868)
+            pyautogui.click(1994,1466)
             time.sleep(1)
             pyautogui.click(1980,1559)
         elif selected_type[2] == 10:
-            pyautogui.click(1994,868)
+            pyautogui.click(1994,1466)
             time.sleep(1)
             pyautogui.click(1937,1695)
         elif selected_type[2] == 11:
-            pyautogui.click(1994,868)
+            pyautogui.click(1994,1466)
             time.sleep(1)
             pyautogui.click(1949,1786)
         speak("Enter the option and submit the form")     
 
 
 
-forms()
+

@@ -231,6 +231,9 @@ if __name__ == "__main__":
                         elif "create a new folder" in query:
                             speak("creating a new folder")
                             pyautogui.hotkey('ctrl', 'shift', 'n')
+                        elif "google form" in query:
+                            from Functionality.googleformgenerator import form
+                            form()
                         elif "type" in query:
                             speak("Please tell me what should I write...")
                             while True:
