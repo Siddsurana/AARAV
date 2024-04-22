@@ -10,7 +10,8 @@ import pyautogui
 import threading
 from plyer import notification
 from Automation.scroll import ScrollControl
-
+import pygetwindow as gw
+from GUI.GUI import GUI
 
 distance_threshold = 0.5  
 
@@ -74,6 +75,8 @@ if __name__ == "__main__":
 
     engine = initialize_speech_recognition()
 
+    GUI()
+
     folder_names = [name for name in os.listdir("sample") if os.path.isdir(os.path.join("sample", name))]
 
     cam = cv2.VideoCapture(0)
@@ -123,6 +126,8 @@ if __name__ == "__main__":
                             speak("you are welcome, sir")
                         elif "who are you" in query:
                             speak("My name is AARAV as Advanced Artificial Response and Voice")
+                        elif "what is your name" in query:
+                            speak("My name is Aarav.")
                         elif "start scrolling up" in query:
                             speak("Scrolling up Sir!")
                             threading.Thread(target=scroll_control.start_scroll_up).start()
@@ -225,7 +230,7 @@ if __name__ == "__main__":
                         elif "file explorer" in query:
                             speak("Opening File Explorer")
                             pyautogui.hotkey('win', 'e')
-                        elif "open window" in query:
+                        elif "switch window" in query:
                             speak("Okay Sir!")
                             pyautogui.hotkey('alt', 'tab')
                         elif "create a new folder" in query:
