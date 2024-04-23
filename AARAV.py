@@ -12,6 +12,8 @@ from plyer import notification
 from Automation.scroll import ScrollControl
 import pygetwindow as gw
 from GUI.GUI import GUI
+import psutil
+
 
 distance_threshold = 0.5  
 
@@ -45,6 +47,31 @@ def takeCommand():
         return "None"
     return query
 
+
+def get_system_status():
+    # Get system's RAM usage in percentage
+    ram_usage = psutil.virtual_memory().percent
+
+    # Get system's battery health if available (only applicable for laptops)
+    battery_health = None
+    try:
+        battery = psutil.sensors_battery()
+        if battery is not None:
+            battery_health = battery.percent
+    except Exception as e:
+        print("Failed to retrieve battery health:", e)
+
+    # Get system's CPU usage in percentage
+    cpu_usage = psutil.cpu_percent()
+
+    return ram_usage, battery_health, cpu_usage
+
+def system_status():
+    ram_usage, battery_health, cpu_usage = get_system_status()
+    status_message = f"System Status:\nRAM Usage: {ram_usage}%\nCPU Usage: {cpu_usage}%"
+    if battery_health is not None:
+        status_message += f"\nBattery Health: {battery_health}%"
+    return status_message
 
 def load_known_face(folder_name):
 
@@ -154,6 +181,16 @@ if __name__ == "__main__":
                             from keyboard import volumedown
                             speak("Turning volume down, sir")
                             volumedown()
+                        elif "who is" in query:
+                            import wikipedia
+                            query = query.replace("who is", "")
+                            try:
+                                results = wikipedia.summary(query, sentences=2)
+                                speak("According to Wikipedia..")
+                                print(results)
+                                speak(results)
+                            except Exception as e:
+                                speak("Can't perform the search at the moment")
                         elif "open web app" in query:
                             from Web.Dictapp import openappweb
                             openappweb(query)
@@ -296,6 +333,11 @@ if __name__ == "__main__":
                             pyautogui.typewrite(query)
                             pyautogui.sleep(2)
                             pyautogui.press("enter")
+                        elif "how far" in query:
+                            query = query.replace("how far", "")
+                            query = query.replace("is", "")
+                            from Functionality.distance import distance
+                            distance(query)
                         elif "email" in query:
                             print("To whom do you want to send the email")
                             speak("To whom do you want to send the email")
@@ -316,6 +358,10 @@ if __name__ == "__main__":
                             else:
                                 print("Sorry! I am unable to find your contact details")
                                 speak("Sorry! I am unable to find your contact details")
+                        elif "system status" in query:
+                            status_message = system_status()
+                            print(status_message)
+                            speak(status_message)
                         elif "shopping" in query:
                             print("Sure! Let's do some Shopping....")
                             speak("Sure! Let's do some Shopping....")
@@ -336,7 +382,17 @@ if __name__ == "__main__":
                                 else:
                                     print("Please choose a valid website.")
                                     speak("Please choose a valid website.")
-                                    break   
+                                    break  
+                        elif "turn on light one" in query:
+                            from HomeAutomation.homeautomation import onlight1
+                            print("Turning on the Light 1")
+                            speak("Turning on the Light 1")
+                            onlight1()
+                        elif "turn off light one" in query:
+                            from HomeAutomation.homeautomation import offlight1
+                            print("Turning off the Light 1")
+                            speak("Turning off the Light 1")
+                            offlight1()
                         elif "book a cab" in query:
                             print("Sure! lets book a cab for you")
                             speak("Sure! lets book a cab for you")
@@ -378,3 +434,18 @@ if __name__ == "__main__":
 
                             elif shutdown == "no":
                                 break
+                        else:
+                            if query == None:
+                                break
+                            else:
+                                import pywhatkit
+                                import wikipedia as googleScrap
+                                from Web.SearchNow import searchGoogle
+                                speak("Here is what i found on google for your query")
+                                print("This is what I found on google")
+                                try:
+                                    pywhatkit.search(query)
+                                    result = googleScrap.summary(query,1)
+                                    speak(result)
+                                except:
+                                    speak("No speakable output available")
