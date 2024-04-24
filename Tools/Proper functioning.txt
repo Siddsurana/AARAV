@@ -173,7 +173,7 @@ if __name__ == "__main__":
                             from Functionality.Calculatenumbers import WolfRamAlpha
                             from Functionality.Calculatenumbers import Calc
                             query = query.replace("calculate","")
-                            query = query.replace("jarvis","")
+                            query = query.replace("aarav","")
                             Calc(query)
                         elif "whatsapp" in query:
                             from Functionality.Whatsapp import sendMessage
@@ -280,7 +280,7 @@ if __name__ == "__main__":
                                 speak("I couldn't find your schedule file.")
                         elif "open" in query:   
                             query = query.replace("open","")
-                            query = query.replace("jarvis","")
+                            query = query.replace("aarav","")
                             pyautogui.press("super")
                             pyautogui.typewrite(query)
                             pyautogui.sleep(2)

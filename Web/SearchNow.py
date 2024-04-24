@@ -35,7 +35,7 @@ def speak(audio):
 def searchGoogle(query):
     if "google" in query:
         import wikipedia as googleScrap
-        query = query.replace("jarvis","")
+        query = query.replace("aarav","")
         query = query.replace("google search","")
         query = query.replace("google","")
         speak("This is what I found on google")
@@ -53,7 +53,7 @@ def searchYoutube(query):
         speak("This is what I found for your search!")
         query = query.replace("youtube search", "")
         query = query.replace("youtube", "")
-        query = query.replace("jarvis", "")
+        query = query.replace("aarav", "")
         web = "https://www.youtube.com/results?search_query=" + query
         try:
             webbrowser.open(web)
@@ -68,7 +68,7 @@ def searchWikipedia(query):
         speak("Searching from Wikipedia....")
         query = query.replace("wikipedia", "")
         query = query.replace("search wikipedia", "")
-        query = query.replace("jarvis", "")
+        query = query.replace("aarav", "")
         try:
             results = wikipedia.summary(query, sentences=2)
             speak("According to Wikipedia..")

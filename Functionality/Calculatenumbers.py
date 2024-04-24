@@ -24,7 +24,7 @@ def WolfRamAlpha(query):
 
 def Calc(query):
     Term = str(query)
-    Term = Term.replace("jarvis","")
+    Term = Term.replace("aarav","")
     Term = Term.replace("multiply","*")
     Term = Term.replace("plus","+")
     Term = Term.replace("minus","-")

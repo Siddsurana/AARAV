@@ -215,7 +215,7 @@ if __name__ == "__main__":
                             from Functionality.Calculatenumbers import WolfRamAlpha
                             from Functionality.Calculatenumbers import Calc
                             query = query.replace("calculate","")
-                            query = query.replace("jarvis","")
+                            query = query.replace("Aarav","")
                             Calc(query)
                         elif "whatsapp" in query:
                             from Functionality.Whatsapp import sendMessage
@@ -325,7 +325,7 @@ if __name__ == "__main__":
                                 speak("I couldn't find your schedule file.")
                         elif "open" in query:   
                             query = query.replace("open","")
-                            query = query.replace("jarvis","")
+                            query = query.replace("Aarav","")
                             pyautogui.press("super")
                             pyautogui.typewrite(query)
                             pyautogui.sleep(2)
@@ -435,18 +435,6 @@ if __name__ == "__main__":
 
                             elif shutdown == "no":
                                 break
-                        else:
-                            if query == "none":
-                                break
-                            else:
-                                import pywhatkit
-                                import wikipedia as googleScrap
-                                from Web.SearchNow import searchGoogle
-                                speak("Here is what i found on google for your query")
-                                print("This is what I found on google")
-                                try:
-                                    pywhatkit.search(query)
-                                    result = googleScrap.summary(query,1)
-                                    speak(result)
-                                except:
-                                    speak("No speakable output available")
+                        else:  
+                           from Dataset.convo import convo
+                           convo(query)
