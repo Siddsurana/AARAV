@@ -49,10 +49,8 @@ def takeCommand():
 
 
 def get_system_status():
-    # Get system's RAM usage in percentage
     ram_usage = psutil.virtual_memory().percent
 
-    # Get system's battery health if available (only applicable for laptops)
     battery_health = None
     try:
         battery = psutil.sensors_battery()
@@ -61,7 +59,6 @@ def get_system_status():
     except Exception as e:
         print("Failed to retrieve battery health:", e)
 
-    # Get system's CPU usage in percentage
     cpu_usage = psutil.cpu_percent()
 
     return ram_usage, battery_health, cpu_usage
@@ -410,9 +407,13 @@ if __name__ == "__main__":
                             query = query.replace("chat", "")
                             from GPT.gpt import start_gpt_prompt
                             start_gpt_prompt(query)
-                        elif "call sahil" in query:
-                            from Automation.call import make_call
+                        elif "call me" in query:
+                            from Call.callme import make_call
                             make_call()
+                        elif "call" in query:
+                            query = query.replace("call", "")
+                            from Call.call import call
+                            call(query)
                         elif "where is" in query:
                             query = query.replace("where", "")
                             query = query.replace("is", "")
@@ -435,7 +436,7 @@ if __name__ == "__main__":
                             elif shutdown == "no":
                                 break
                         else:
-                            if query == None:
+                            if query == "none":
                                 break
                             else:
                                 import pywhatkit

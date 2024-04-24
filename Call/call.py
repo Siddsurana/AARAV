@@ -6,7 +6,7 @@ def make_a_call(phonenumber):
     
         try:
             subprocess.run(command, shell=True, check=True)
-            print(f"Calling {}...")
+            print(f"Calling {phonenumber}...")
         except subprocess.CalledProcessError as e:
             print(f"Error: {e}")
 

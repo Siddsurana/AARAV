@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A.A.R.A.V</title>
 
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
 
     <!-- Bootsrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,7 +19,7 @@
         type="text/javascript"></script>
 
     <!-- Texllate  -->
-    <link rel="stylesheet">
+    <link rel="stylesheet" href="./assets/vendore/texllate/animate.css">
 
     <link rel="stylesheet" href="style.css">
 
@@ -43,20 +43,35 @@
                        
 
                     </div>
-                    <h5 id = "nameproj" style="color: rgb(232, 198, 151);">A.A.R.A.V</h5>
-                    <h6 id = "fullformproj" style="color: rgb(232, 198, 151);"">Advance Artificial Response And Voice</h6>
+                    <h5  id="nameproj" style="color: rgb(232, 198, 151)">A.A.R.A.V</h5>
+                    <h6  id ="fullformproj" style="color: rgb(232, 198, 151)">Advance Artificial Response And Voice</h6>
                     
+                    <div class="clock">
+                        <span id="hrs">00</span>
+                        <span>:</span>
+                        <span id="min">00</span>
+                        <span>:</span>
+                        <span id="sec">00</span>
+                        
+                    </div>
 
 
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-
-        </section>
+                </section>
 
         
     </div>
 
+    <div class="offcanvas offcanvas-start chat-canvas" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="offcanvasScrollingLabel">Chats</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div id="chat-canvas-body" class="offcanvas-body">
+            <!-- Chatting code here -->
+
+        </div>
+    </div>
 
     <!--Jquery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -74,10 +89,32 @@
    
 
     <!-- Texllate js -->
+
+    <script src="./assets/vendore/texllate/jquery.fittext.js"></script>
+    <script src="./assets/vendore/texllate/jquery.fittext.js"></script>
+    <script src="http://jschr.github.io/textillate/jquery.textillate.js"></script>
+    
     
     <script src="main.js"></script>
     <script src="controller.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <script src="/eel.js"></script>
+
+    <script>
+       let HRS=$("#hrs");
+let MIN=$("#min");
+let SEC=$("#sec");
+
+
+
+setInterval(() => {
+    let ctime = new Date();
+    HRS.html(ctime.getHours() < 10 ? "0" + ctime.getHours() : ctime.getHours());
+    MIN.html(ctime.getMinutes() < 10 ? "0" + ctime.getMinutes() : ctime.getMinutes());
+    SEC.html(ctime.getSeconds() < 10 ? "0" + ctime.getSeconds() : ctime.getSeconds());
+}, 1000);
+
+
+    </script>
 
 
 </body>

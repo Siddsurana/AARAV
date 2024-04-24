@@ -45,16 +45,16 @@ def GUI():
     pyautogui.hotkey('win', 'up')
     time.sleep(2)
 
- #   cmd_window = None
-  #  while not cmd_window:
-   #     cmd_window = gw.getWindowsWithTitle('Windows PowerShell')
-    #    if not cmd_window:
-     #       time.sleep(1)
+    cmd_window = None
+    while not cmd_window:
+         cmd_window = gw.getWindowsWithTitle('Windows PowerShell')
+    if not cmd_window:
+        time.sleep(1)
 
 
-   # if cmd_window:
-    #    cmd_window = cmd_window[0]  # Assuming there's only one Command Prompt window
-     #   cmd_window.activate()  # Bring the window to the front
-      #  cmd_window.resizeTo(1400, 1600)  # Resize the window
-       # cmd_window.moveTo(1500, 100) 
+    if cmd_window:
+        cmd_window = cmd_window[0]  
+        cmd_window.activate()  
+        cmd_window.resizeTo(1400, 1600)  
+        cmd_window.moveTo(1500, 100) 
 
