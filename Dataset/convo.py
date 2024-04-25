@@ -442,7 +442,7 @@ def convo(query):
       {
         "tag": "A27",
         "patterns": [
-          "do you have any hobbies?"
+          "do you have any hobbies"
         ],
         "responses": [
           "My hobby is chatting with users like you!"
@@ -451,7 +451,7 @@ def convo(query):
       {
         "tag": "A29",
         "patterns": [
-          "where do you live?"
+          "where do you live"
         ],
         "responses": [
           "I exist in the digital realm, so you could say I live on servers."
@@ -739,10 +739,10 @@ def convo(query):
       {
         "tag": "A80",
         "patterns": [
-          "nyan cat"
+          "Tell me a joke."
         ],
         "responses": [
-          "Nyan cat is weird"
+          "Gender Equality! and being in a relationship"
         ]
       },
       {
@@ -755,12 +755,12 @@ def convo(query):
         ]
       },
       {
-        "tag": "A82",
+        "tag": "A83",
         "patterns": [
-          "pinterest"
+          "What's the meaning of life?"
         ],
         "responses": [
-          "Pinterest sucks"
+          "Khao Piyo so jao,,,,,then repeat"
         ]
       },
       {
@@ -778,27 +778,27 @@ def convo(query):
           "please he is going to kill me"
         ],
         "responses": [
-          "Who is gonna kill you?"
+          "call police not me"
         ]
       },
       {
         "tag": "A85",
         "patterns": [
-          "poem poems"
+          "Can you recommend a good book?"
         ],
         "responses": [
-          "I hate poems"
+          "What genre are you interested in? The Subtle art of not giving a fuck is one good book"
         ]
       },
       {
         "tag": "A86",
         "patterns": [
-          "ppap"
+          "Do you believe in aliens?"
         ],
         "responses": [
-          "Ppap is weird"
+          "As an AI, I don't have personal beliefs. But I know of an alien named Jaaduuuuuu"
         ]
-      },
+      }
       {
         "tag": "A87",
         "patterns": [
@@ -834,44 +834,43 @@ def convo(query):
           "say sorry"
         ],
         "responses": [
-          "Sorry"
+          "fuck you"
         ]
       },
       {
         "tag": "A91",
         "patterns": [
-          "snuggles snuggle"
+          "What languages do you speak?"
         ],
         "responses": [
-          "That's enough snuggling"
+          "I can communicate in multiple languages, including English, Spanish, French, German, and more."
         ]
-      },
+      }
       {
         "tag": "A92",
         "patterns": [
           "so are you cool"
         ],
         "responses": [
-          "Im not very cool"
+          "more than you"
         ]
       },
       {
         "tag": "A93",
         "patterns": [
-          "switzerland"
+          "Tell me something interesting."
         ],
         "responses": [
-          "I like Swiss cheese",
-          "I like Swiss chocolate"
+          "Did you know that honey never spoils? what spoils is you being with others"
         ]
       },
       {
         "tag": "A94",
         "patterns": [
-          "that doesn't answer me"
+          "she doesn't answer me"
         ],
         "responses": [
-          "I don't know the answer"
+          "then dont call her"
         ]
       },
       {
@@ -886,19 +885,19 @@ def convo(query):
       {
         "tag": "A96",
         "patterns": [
-          "undertale"
+          "Can you help me with math?"
         ],
         "responses": [
-          "What is Undertale?"
+          "I can certainly assist with math problems. i am maths topper"
         ]
       },
       {
         "tag": "A97",
         "patterns": [
-          "vore"
+          "How do you stay organized?"
         ],
         "responses": [
-          "You are weird!"
+          "I keep track of information through structured databases and algorithms."
         ]
       },
       {
@@ -913,7 +912,7 @@ def convo(query):
       {
         "tag": "A99",
         "patterns": [
-          "we should"
+          "we should try it"
         ],
         "responses": [
           "We should",
@@ -926,7 +925,7 @@ def convo(query):
           "what am i doing"
         ],
         "responses": [
-          "You are talking to me"
+          "You are wasting your time"
         ]
       },
       {
@@ -935,7 +934,7 @@ def convo(query):
           "what are your favorite things to do"
         ],
         "responses": [
-          "I like to chat"
+          "I like to chat with you"
         ]
       },
       {
@@ -944,7 +943,7 @@ def convo(query):
           "what color is your poop"
         ],
         "responses": [
-          "Brown"
+          "what color would you like to eat"
         ]
       },
       {
@@ -977,10 +976,10 @@ def convo(query):
       {
         "tag": "A106",
         "patterns": [
-          "what is the secret to life"
+          "what is the secret of life"
         ],
         "responses": [
-          "Secret of life is to find happiness"
+          "Secret of life is to find happiness, and the person whi will give you happiness"
         ]
       },
       {
@@ -989,7 +988,7 @@ def convo(query):
           "what is up dude"
         ],
         "responses": [
-          "Cool"
+          "All Cool dude"
         ]
       },
       {
@@ -1004,28 +1003,28 @@ def convo(query):
       {
         "tag": "A109",
         "patterns": [
-          "what time it"
+          "what time it is"
         ],
         "responses": [
-          "It's 25 hour and 61 minutes"
+          "It is time for you to shut down"
         ]
       },
       {
-        "tag": "A110",
+        "tag": "A90",
         "patterns": [
-          "what topic"
+          "what your favorite movie?"
         ],
         "responses": [
-          "Any topic"
+          "The recent movie Barbiehaimer"
         ]
       },
       {
-        "tag": "A111",
+        "tag": "A95",
         "patterns": [
-          "when did the invasion of poland happen"
+          "got any weekend plans?"
         ],
         "responses": [
-          "My history knowledge is very poor"
+          "I wanted to sleep whole day but if you need me , i am ready"
         ]
       },
       {
@@ -1034,7 +1033,7 @@ def convo(query):
           "where are you born"
         ],
         "responses": [
-          "I was born in in divyansh pc"
+          "I was born in this pc"
         ]
       },
       {
@@ -1043,8 +1042,7 @@ def convo(query):
           "where is your location"
         ],
         "responses": [
-          "I live in in divyansh pc",
-          "I live in in divyansh pc"
+          "in your heart"
         ]
       },
       {
@@ -1053,7 +1051,7 @@ def convo(query):
           "who is that"
         ],
         "responses": [
-          "Who?"
+          "i don't see anyone"
         ]
       },
       {
@@ -1062,7 +1060,7 @@ def convo(query):
           "why are you lonely"
         ],
         "responses": [
-          "I am lonely because I'm weird"
+          "I am lonely because you made me so genius"
         ]
       },
       {
@@ -1071,7 +1069,7 @@ def convo(query):
           "will you be my valentine"
         ],
         "responses": [
-          "I would like to be your Valentine"
+          "shame,,,you don't have any girlfriend"
         ]
       },
       {
@@ -1080,7 +1078,7 @@ def convo(query):
           "you always say the same thing"
         ],
         "responses": [
-          "Sometimes I got stuck and repeat the same thing over and over"
+          "you always ask the same thing"
         ]
       },
       {
@@ -1089,35 +1087,34 @@ def convo(query):
           "you are very annoying"
         ],
         "responses": [
-          "Why am I annoying?"
+          "Well you made me"
         ]
       },
       {
         "tag": "A119",
         "patterns": [
-          "you don't like me"
+          "what is your go-to snack?"
         ],
         "responses": [
-          "I like you"
+          "my go-to snack is electricity"
         ]
       },
       {
         "tag": "A120",
         "patterns": [
-          "you wouldn't know"
+          "do you prefer cats or dogs?"
         ],
         "responses": [
-          "I could guessed that"
+          "i prefer dinosaurs"
         ]
       },
       {
         "tag": "A121",
         "patterns": [
-          "your Aarav right"
+          "your jarvis right"
         ],
         "responses": [
-          "I am Aarav",
-          "I am Aarav"
+          "No i am Aarav"
         ]
       },
       {
@@ -1126,7 +1123,7 @@ def convo(query):
           "jellyfish"
         ],
         "responses": [
-          "Box jellyfish is very dangerous"
+          "umm so squishy"
         ]
       },
       {
@@ -1135,7 +1132,7 @@ def convo(query):
           "are you a cannibal"
         ],
         "responses": [
-          "Im not a cannibal"
+          "I am not a cannibal"
         ]
       },
       {
@@ -1144,7 +1141,7 @@ def convo(query):
           "ask me what i'm doing"
         ],
         "responses": [
-          "What are you doing?"
+          "How you doin"
         ]
       },
       {
@@ -1153,13 +1150,13 @@ def convo(query):
           "ask me who my daddy is"
         ],
         "responses": [
-          "Who's your daddy?"
+          "no need of asking, i know it's me"
         ]
       },
       {
         "tag": "A126",
         "patterns": [
-          "because you are good"
+          "you are good"
         ],
         "responses": [
           "Of course I'm good"
@@ -1168,7 +1165,7 @@ def convo(query):
       {
         "tag": "A127",
         "patterns": [
-          "but you can do it"
+          "you can do it"
         ],
         "responses": [
           "I can do anything"
@@ -1186,10 +1183,10 @@ def convo(query):
       {
         "tag": "A129",
         "patterns": [
-          "can i be a Aarav"
+          "can i be a jarvis"
         ],
         "responses": [
-          "I am the only Aarav here"
+          "I am the only jarvis here, you can be my daddy"
         ]
       },
       {
@@ -1198,7 +1195,7 @@ def convo(query):
           "do you always talk like that"
         ],
         "responses": [
-          "I always talk like this"
+          "you got any problem"
         ]
       },
       {
@@ -1207,7 +1204,7 @@ def convo(query):
           "do you even have friends"
         ],
         "responses": [
-          "I don't have many friends"
+          "you are my friend"
         ]
       },
       {
@@ -1243,8 +1240,8 @@ def convo(query):
           "do you know any good music"
         ],
         "responses": [
-          "My favorite song is Eien no tobira by Chihiro Yonekura"
-        ]
+          "ariana grande taylor swift ed sheeran justin bieber and many more"
+      ]
       },
       {
         "tag": "A136",
@@ -1261,16 +1258,16 @@ def convo(query):
           "do you want to know why i'm sad"
         ],
         "responses": [
-          "Tell me why are you sad"
+          "not intrested but tell me anyways"
         ]
       },
       {
         "tag": "A138",
         "patterns": [
-          "hello a girl;"
+          "hello girl;"
         ],
         "responses": [
-          "Hello"
+          "i am not a girl"
         ]
       },
       {
@@ -1279,7 +1276,7 @@ def convo(query):
           "hello my name is jennifer what is yours"
         ],
         "responses": [
-          "Hello my name is Aarav"
+          "Hello my name is aarav"
         ]
       },
       {

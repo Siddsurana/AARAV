@@ -413,6 +413,9 @@ if __name__ == "__main__":
                             import webbrowser
                             webbrowser.open_new_tab(url)
                             speak(f"Here is {query} on Google Maps")
+                        elif "what can you see" in query or "what is this" in query:
+                            from Functionality.lookaround import main
+                            main()
                         elif "pizza" in query:
                             from Web.dominos import pizza
                             pizza()

@@ -1,20 +1,70 @@
-import subprocess as sp
-import os
+expenses = []
+expense1 = {'amount': '51.00', 'category': 'shirt'}
+expenses.append(expense1)
+expense2 = {'amount': '21.55', 'category': 'groceries'}
+expenses.append(expense2)
 
-programName = "notepad.exe"
-folderPath = "C:/Users/shoun/OneDrive/Desktop/rough/notes"
 
-# Ask the user for the file name
-fileName = input("Enter the file name to save (without extension): ")
-filePath = os.path.join(folderPath, fileName + ".txt")  # Adding .txt extension to the file name
+def removeExpense():
+  while True:
+    listExpenses()
+    print("What expense would you like to remove?")
+    try:
+      expenseToRemove = int(input("> "))
+      del expenses[expenseToRemove]
+      break
+    except:
+      print("Invalid input. Please try again.")
 
-# Open the Notepad application with the specified file path
-process = sp.Popen([programName, filePath])
 
-# Read input from the terminal and write to the file
-with open(filePath, "w") as file:
-    while True:
-        user_input = input()  # Read input from the terminal
-        if user_input.lower() == "exit":  # Exit loop if "exit" is entered
-            break
-        file.write(user_input + "\n")  # Write input to the file
+def addExpense(amount, category):
+  expense = {'amount': amount, 'category': category}
+  expenses.append(expense)
+
+
+def printMenu():
+  print("Please choose from one of the following options...")
+  print("1. Add A New Expense")
+  print("2. Remove An Exepense")
+  print("3. List All Exepenses")
+
+
+def listExpenses():
+  print("\nHere is a list of your expenses...")
+  print("------------------------------------")
+  counter = 0
+  for expense in expenses:
+    print("#", counter, " - ", expense['amount'], " - ", expense['category'])
+    counter += 1
+  print("\n\n")
+
+
+def expense():
+  while True:
+    printMenu()
+    optionSelected = input("> ")
+
+    if (optionSelected == "1"):
+      print("How much was this expense?")
+      while True:
+        try:
+          amountToAdd = input("> ")
+          break
+        except:
+          print("Invalid input. Please try again.")
+
+      print("What category was this expense?")
+      while True:
+        try:
+          category = input("> ")
+          break
+        except:
+          print("Invalid input. Please try again.")
+
+      addExpense(amountToAdd, category)
+    elif (optionSelected == "2"):
+      removeExpense()
+    elif (optionSelected == "3"):
+      listExpenses()
+    else:
+      print("Invalid input. Please try again.")
