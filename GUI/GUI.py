@@ -37,7 +37,7 @@ def takeCommand():
 def GUI():
     pygame.mixer.init()
     audio = "Tools\sound.mp3"
-    os.system('start msedge.exe --app="http://127.0.0.1:5500/GUI/index.html"')
+    os.system('start msedge.exe --app="https://aarav-gui.netlify.app/"')
     pygame.mixer.music.load(audio)
     pygame.mixer.music.play()
     speak("Initializing....")
