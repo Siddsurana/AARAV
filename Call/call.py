@@ -17,4 +17,10 @@ def call(query):
     elif "siddharth" in query:
         phonenumber= "9834647612"
         make_a_call(phonenumber)
+    elif "laukik" in query:
+         phonenumber = "8767364403"
+         make_a_call(phonenumber)
+    elif "parth" in query:
+         phonenumber = "7721904123"
+         make_a_call(phonenumber)
 

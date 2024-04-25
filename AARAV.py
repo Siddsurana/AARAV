@@ -114,7 +114,7 @@ if __name__ == "__main__":
         recognized_user_folder_name = detect_and_recognize_faces(frame, folder_names)
 
         if recognized_user_folder_name is not None:
-            user_mapping = {"1": "sahil", "2": "loukik", "3": "siddharth"} 
+            user_mapping = {"1": "sahil", "2": "loukik", "3": "siddharth", "4": "shounak"} 
             user_name = user_mapping.get(recognized_user_folder_name)
             if user_name:
                 greet_user(user_name)
