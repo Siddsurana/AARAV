@@ -202,6 +202,10 @@ if __name__ == "__main__":
                             query = query.replace("search","")
                             query = query.replace("on","")
                             searchWikipedia(query)
+                        elif "make a note" in query:
+                            speak("okay sir!!")
+                            from Notes.notes import notes
+                            notes()
                         elif "news" in query:
                             from Web.NewsRead import latestnews
                             latestnews()
