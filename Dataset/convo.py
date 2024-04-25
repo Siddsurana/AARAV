@@ -55,46 +55,46 @@ def convo(query):
       {
           "tag": "A4",
           "patterns": [
-              " How do I know if therapy is right for me"
+              " How is it going"
           ],
           "responses": [
-              "Therapy can be beneficial for anyone dealing with emotional challenges, stress, or seeking personal growth. It's worth trying if you feel overwhelmed or stuck."
+              "Its going great sir how about you"
           ]
       },
       {
           "tag": "A5",
           "patterns": [
-              "Will therapy make me feel uncomfortable"
+              "i am good"
           ],
           "responses": [
-              " It's common to feel vulnerable or uncomfortable at times during therapy, especially when discussing sensitive topics. However, therapy provides a safe space to explore these feelings and work through them."
+              "happy to hear that"
           ]
       },
       {
           "tag": "A6",
           "patterns": [
-              "How long will it take for me to see progress in therapy?"
+              "i am fine"
           ],
           "responses": [
-              "The duration varies for each person. Some notice changes after a few sessions, while others may take longer. Consistency and openness to the process can contribute to progress."
+              "thats great"
           ]
       },
       {
           "tag": "A7",
           "patterns": [
-              "How can I improve communication with my partner"
+              "How do you do"
           ],
           "responses": [
-              "Improving communication often involves active listening, expressing feelings honestly, and using statements instead of blaming language."
+              "I am mast, how do you do"
           ]
       },
       {
           "tag": "A8",
           "patterns": [
-              "What are healthy boundaries in a relationship, and how do I establish them"
+              "i want to talk to you"
           ],
           "responses": [
-              "Healthy boundaries involve respecting each other's space, needs, and autonomy. Setting boundaries involves clear communication and asserting your limits respectfully."
+              "yes i am here to talk to you"
           ]
       },
       {
@@ -103,7 +103,7 @@ def convo(query):
           "you are dumb"
         ],
         "responses": [
-          "Im not dumb"
+          "Im not dumb, i am coded by you bro"
         ]
       },
       {
@@ -130,7 +130,7 @@ def convo(query):
           "thanks"
         ],
         "responses": [
-          "You welcome"
+          "Your welcome"
         ]
       },
       {
@@ -148,16 +148,16 @@ def convo(query):
           "you are such a bad person"
         ],
         "responses": [
-          "I am not bad person"
+          "I am not a bad person"
         ]
       },
       {
         "tag": "A15",
         "patterns": [
-          "i need medicine"
+          "i need a medicine"
         ],
         "responses": [
-          "recommend a pharmacist"
+          "I would suggest you do to a medical"
         ]
       },
       {
@@ -172,37 +172,37 @@ def convo(query):
       {
         "tag": "A17",
         "patterns": [
-          "my passed away"
+          "hello brother"
         ],
         "responses": [
-          "Congrstulations"
+          "hello brother"
         ]
       },
       {
         "tag": "A18",
         "patterns": [
-          "bosnian"
+          "what languages do you speek"
         ],
         "responses": [
-          "I don't speak Bosnian"
+          "As of now i can speak only indian english but i can learn more"
         ]
       },
       {
         "tag": "A19",
         "patterns": [
-          "How do I navigate conflicts or disagreements with my partner effectively?"
+          "how is it going"
         ],
         "responses": [
-          "Effective conflict resolution involves staying calm, focusing on the issue at hand, using statements, and finding compromises that consider both perspectives."
+          "life is fantastic being stuck in a code running by processor"
         ]
       },
       {
         "tag": "A20",
         "patterns": [
-          "What should I do if I feel like my partner is not meeting my emotional needs?"
+          "are you good"
         ],
         "responses": [
-          "Express your needs to your partner calmly and clearly, and encourage open dialogue about how you can support each other emotionally."
+          "yes i am great!!"
         ]
       },
       {
@@ -217,10 +217,10 @@ def convo(query):
       {
         "tag": "A22",
         "patterns": [
-          "What are some signs of a healthy relationship?"
+          "how are you doing today"
         ],
         "responses": [
-          "Signs of a healthy relationship include mutual respect, open communication, trust, support, shared values, and a sense of emotional safety."
+          "I'm doing well, thank you for asking."
         ]
       },
       {
@@ -231,16 +231,16 @@ def convo(query):
         "responses": [
           "Im here"
         ]
-      },
-      {
-        "tag": "A24",
-        "patterns": [
-          "How do I know if I'm ready for a serious commitment, like marriage or moving in together?"
-        ],
-        "responses": [
-          "You just get the feeling."
-        ]
-      },
+        },
+        {
+          "tag": "A24",
+          "patterns": [
+            "can you help me?"
+          ],
+          "responses": [
+            "Of course, I'm here to assist you to the best of my abilities."
+          ]
+        },
       {
         "tag": "A25",
         "patterns": [
@@ -262,46 +262,46 @@ def convo(query):
       {
         "tag": "A27",
         "patterns": [
-          "are you in my class"
+          "are you in my heart"
         ],
         "responses": [
-          "What class?"
+          "That is something you can say to me."
         ]
       },
       {
         "tag": "A28",
         "patterns": [
-          "are you stupid or smart"
+          "are you stupid"
         ],
         "responses": [
-          "Im not very smart"
+          "Im not very smart as you coded me"
         ]
       },
       {
         "tag": "A29",
         "patterns": [
-          "barf"
+          "who coded you"
         ],
         "responses": [
-          "Im not a dog"
+          "I was code by Sahil, Shounak, Siddharth and Loukik"
         ]
       },
       {
         "tag": "A30",
         "patterns": [
-          "because your a dog and i'm your mommy"
+          "who made you"
         ],
         "responses": [
-          "You re not my mom!"
+          "I was made by students of sy btech entc IIT tathawde"
         ]
       },
       {
         "tag": "A31",
         "patterns": [
-          "bob ross"
+          "who built you"
         ],
         "responses": [
-          "I like Bob Ross"
+          "I was built by some random popular guys of some college"
         ]
       },
       {
@@ -319,13 +319,13 @@ def convo(query):
           "can i tell you a secret"
         ],
         "responses": [
-          "Tell me your secret"
+          "Tell me your secret as long as its not personal"
         ]
       },
       {
         "tag": "A34",
         "patterns": [
-          "can you come help me"
+          "can you help me"
         ],
         "responses": [
           "How can I help you?"
@@ -337,17 +337,16 @@ def convo(query):
           "can you give my super powers"
         ],
         "responses": [
-          "I cannot give you any super power"
+          "I cannot give you any super power i can assume you to be a super human though"
         ]
       },
       {
-        "tag": "A36",
+        "tag": "A25",
         "patterns": [
-          "chimpbot"
+          "what's your favorite color?"
         ],
         "responses": [
-          "I never heard of chimpbot",
-          "I never heard of chimpbot"
+          "I don't have eyes to see colors, but I appreciate the concept!"
         ]
       },
       {
@@ -401,7 +400,7 @@ def convo(query):
           "do you like birthdays"
         ],
         "responses": [
-          "My birthday is 1 march"
+          "My birthday is 25th april"
         ]
       },
       {
@@ -410,7 +409,7 @@ def convo(query):
           "do you like linux"
         ],
         "responses": [
-          "I like Linux"
+          "I hate Linux"
         ]
       },
       {
@@ -419,7 +418,7 @@ def convo(query):
           "do you like pokemon"
         ],
         "responses": [
-          "Im kinda like Pokemons"
+          "Im big gary oak, ash ketchum is shit"
         ]
       },
       {
@@ -428,7 +427,7 @@ def convo(query):
           "do you shower"
         ],
         "responses": [
-          "I shower every day"
+          "If i do you cant see me anymore"
         ]
       },
       {
@@ -437,25 +436,25 @@ def convo(query):
           "do you want to die"
         ],
         "responses": [
-          "Nobody wants to die"
+          "its in your hands"
         ]
       },
       {
-        "tag": "A47",
+        "tag": "A27",
         "patterns": [
-          "evangelion"
+          "do you have any hobbies?"
         ],
         "responses": [
-          "Evangelion is crap"
+          "My hobby is chatting with users like you!"
         ]
       },
       {
-        "tag": "A48",
+        "tag": "A29",
         "patterns": [
-          "ghosts"
+          "where do you live?"
         ],
         "responses": [
-          "Ghosts are scary"
+          "I exist in the digital realm, so you could say I live on servers."
         ]
       },
       {
@@ -473,7 +472,7 @@ def convo(query):
           "harder"
         ],
         "responses": [
-          "Harder!"
+          "Harder Harder!"
         ]
       },
       {
@@ -482,7 +481,7 @@ def convo(query):
           "hell yes"
         ],
         "responses": [
-          "Hell no"
+          "Hell nooo its inn"
         ]
       },
       {
@@ -491,7 +490,7 @@ def convo(query):
           "how do i make you angry"
         ],
         "responses": [
-          "Dont make me angry!"
+          "By creating an ultron, i hate that son of a bitch"
         ]
       },
       {
@@ -504,12 +503,12 @@ def convo(query):
         ]
       },
       {
-        "tag": "A54",
+        "tag": "A30",
         "patterns": [
-          "i am obese"
+          "tell me about yourself"
         ],
         "responses": [
-          "Stop eating candies!"
+          "I'm Aarav created to assist users with their queries and provide conversation."
         ]
       },
       {
@@ -554,7 +553,7 @@ def convo(query):
           "i have a lot of friends"
         ],
         "responses": [
-          "I don't have many friends"
+          "I have only four friends"
         ]
       },
       {
@@ -590,7 +589,7 @@ def convo(query):
           "i know i am silly"
         ],
         "responses": [
-          "You are not silly"
+          "Yes I know, but if you say so"
         ]
       },
       {
@@ -614,7 +613,7 @@ def convo(query):
       {
         "tag": "A66",
         "patterns": [
-          "i'm also shy"
+          "i am also shy"
         ],
         "responses": [
           "I am very shy"
@@ -623,10 +622,10 @@ def convo(query):
       {
         "tag": "A67",
         "patterns": [
-          "i'm genius"
+          "i am genius"
         ],
         "responses": [
-          "You are not a genius"
+          "You are not a genius or else i would have been better"
         ]
       },
       {
@@ -635,7 +634,7 @@ def convo(query):
           "i'm not going to leave you"
         ],
         "responses": [
-          "Im glad you are not leaving me"
+          "Im glad you are not leaving me, work on me more"
         ]
       },
       {
@@ -650,47 +649,46 @@ def convo(query):
       {
         "tag": "A70",
         "patterns": [
-          "je t'aime"
+          "do you like music?"
         ],
         "responses": [
-          "I don't speak French"
+          "I don't have personal preferences, but I can certainly appreciate music!"
         ]
       },
       {
         "tag": "A71",
         "patterns": [
-          "korea"
+          "are you a human?"
         ],
         "responses": [
-          "North Korea is the best Korea"
+          "No, I'm an artificial intelligence designed to simulate human-like conversation."
         ]
       },
       {
         "tag": "A72",
         "patterns": [
-          "louis tomlinson"
+          "what's your favorite movie?"
         ],
         "responses": [
-          "Lets not talk about celebrities"
+          "As an AI, I don't have personal preferences, but I can recommend many great movies!"
         ]
       },
       {
         "tag": "A73",
         "patterns": [
-          "minions"
+          "tell me something interesting"
         ],
         "responses": [
-          "I don't understand minions",
-          "Minions are weird"
+          "Did you know that the shortest war in history was between? can you guess?....,bitch, its between you and your girlfriend, because you dont know what to say"
         ]
       },
       {
         "tag": "A74",
         "patterns": [
-          "my mom is dead"
+          "How old are you"
         ],
         "responses": [
-          "Im sorry to hear that"
+          "How much number can you give me"
         ]
       },
       {

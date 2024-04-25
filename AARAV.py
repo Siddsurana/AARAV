@@ -131,7 +131,7 @@ if __name__ == "__main__":
             scroll_control = ScrollControl()  
             while True:
                 query = takeCommand().lower()
-                if "wake up" in query:
+                if "wake up" in query or "aarav" in query:
                     from Functionality.GreetMe import greetMe
                     greetMe()
 
@@ -142,12 +142,6 @@ if __name__ == "__main__":
                             break 
                         elif "hello" in query:
                             speak("Hello Sir!, How are you?")
-                        elif "i am fine" in query:
-                            speak("that's great, sir")
-                        elif "how are you" in query:
-                            speak("Perfect, sir")
-                        elif "thank you" in query:
-                            speak("you are welcome, sir")
                         elif "who are you" in query:
                             speak("My name is AARAV as Advanced Artificial Response and Voice")
                         elif "what is your name" in query:
@@ -286,33 +280,27 @@ if __name__ == "__main__":
                         elif "screenshot" in query:
                             im = pyautogui.screenshot()
                             im.save("ss.jpg")
-
                         elif "schedule my day" in query:
                             tasks = [] 
-                            speak("Do you want to clear old tasks (Plz speak YES or NO)")
+                            speak("Do you want to clear old tasks (Please speak YES or NO)")
                             query = takeCommand().lower()
-                            if "yes" in query:
-                                file = open("tasks.txt","w")
-                                file.write(f"")
-                                file.close()
-                                no_tasks = int(input("Enter the no. of tasks :- "))
-                                i = 0
+                            if "yes please" in query:
+                                if os.path.exists("TODO/tasks.txt"):
+                                    os.remove("TODO/tasks.txt")  
+                                no_tasks = int(input("Enter the number of tasks: "))
                                 for i in range(no_tasks):
-                                    tasks.append(input("Enter the task :- "))
-                                    file = open("tasks.txt","a")
-                                    file.write(f"{i}. {tasks[i]}\n")
-                                    file.close()
-                            elif "no" in query:
-                                i = 0
-                                no_tasks = int(input("Enter the no. of tasks :- "))
+                                    tasks.append(input("Enter the task: "))
+                                    with open("TODO/tasks.txt", "a") as file:
+                                        file.write(f"{i}. {tasks[i]}\n")
+                            elif "no thank you" in query:
+                                no_tasks = int(input("Enter the number of tasks: "))
                                 for i in range(no_tasks):
-                                    tasks.append(input("Enter the task :- "))
-                                    file = open("tasks.txt","a")
-                                    file.write(f"{i}. {tasks[i]}\n")
-                                    file.close()
+                                    tasks.append(input("Enter the task: "))
+                                    with open("TODO/tasks.txt", "a") as file:
+                                        file.write(f"{i}. {tasks[i]}\n")
                         elif "show my schedule" in query:
                             try:
-                                with open("TODO\\tasks.txt", "r") as file:
+                                with open("TODO/tasks.txt", "r") as file:
                                     tasks = file.readlines()
                                     if tasks:
                                         speak("Your schedule for today is as follows:")
