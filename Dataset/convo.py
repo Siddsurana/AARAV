@@ -341,7 +341,7 @@ def convo(query):
         ]
       },
       {
-        "tag": "A25",
+        "tag": "A36",
         "patterns": [
           "what's your favorite color?"
         ],
@@ -440,7 +440,7 @@ def convo(query):
         ]
       },
       {
-        "tag": "A27",
+        "tag": "A47",
         "patterns": [
           "do you have any hobbies"
         ],
@@ -449,7 +449,7 @@ def convo(query):
         ]
       },
       {
-        "tag": "A29",
+        "tag": "A48",
         "patterns": [
           "where do you live"
         ],
@@ -503,7 +503,7 @@ def convo(query):
         ]
       },
       {
-        "tag": "A30",
+        "tag": "A54",
         "patterns": [
           "tell me about yourself"
         ],
@@ -793,12 +793,12 @@ def convo(query):
       {
         "tag": "A86",
         "patterns": [
-          "Do you believe in aliens?"
+          "Do you believe in aliens"
         ],
         "responses": [
           "As an AI, I don't have personal beliefs. But I know of an alien named Jaaduuuuuu"
         ]
-      }
+      },
       {
         "tag": "A87",
         "patterns": [
@@ -845,7 +845,7 @@ def convo(query):
         "responses": [
           "I can communicate in multiple languages, including English, Spanish, French, German, and more."
         ]
-      }
+      },
       {
         "tag": "A92",
         "patterns": [
@@ -71250,8 +71250,8 @@ def convo(query):
         "responses": [
           "Red flags may include lack of respect, controlling behavior, frequent conflicts without resolution, lack of trust, emotional or physical abuse, and disregard for boundaries."
         ]
-      },
-  ]
+      }
+  ];
   response = get_response(intents, query)
   voice_output(response)
 

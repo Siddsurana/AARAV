@@ -1,61 +1,99 @@
-import pyttsx3
-import speech_recognition as sr
-from pydub import AudioSegment
-from pydub.playback import play
-from ShazamAPI import Shazam
-from io import BytesIO
+import random
 
-# Initialize text-to-speech engine
-engine = pyttsx3.init()
+def print_board(board):
+    for row in board:
+        print(" | ".join(row))
+        print("-" * 5)
 
-# Function to convert text to speech
-def speak(text):
-    engine.say(text)
-    engine.runAndWait()
+def check_winner(board, player):
+    for row in board:
+        if all(cell == player for cell in row):
+            return True
 
-# Function to record voice and convert it to MP3
-def record_and_convert_to_mp3():
-    recognizer = sr.Recognizer()
-    with sr.Microphone() as source:
-        print("Listening...")
-        audio = recognizer.listen(source)
-        print("Recognizing...")
+    for col in range(3):
+        if all(board[row][col] == player for row in range(3)):
+            return True
+
+    if all(board[i][i] == player for i in range(3)):
+        return True
+
+    if all(board[i][2 - i] == player for i in range(3)):
+        return True
+
+    return False
+
+def is_board_full(board):
+    for row in board:
+        for cell in row:
+            if cell == " ":
+                return False
+    return True
+
+def get_user_move(board):
+    while True:
         try:
-            # Convert the recorded audio to text
-            text = recognizer.recognize_google(audio)
-            print("You said:", text)
-            speak("You said:" + text)
-            # Convert the audio to MP3 format
-            audio = AudioSegment.from_file(BytesIO(audio.get_wav_data()))
-            audio.export("recorded_voice.mp3", format="mp3")
-            return "recorded_voice.mp3"
-        except sr.UnknownValueError:
-            print("Sorry, I could not understand what you said.")
-            speak("Sorry, I could not understand what you said.")
-            return None
-        except sr.RequestError as e:
-            print("Could not request results from Google Speech Recognition service; {0}".format(e))
-            speak("Could not request results from Google Speech Recognition service.")
-            return None
+            row = int(input("Enter row (0, 1, or 2): "))
+            col = int(input("Enter column (0, 1, or 2): "))
+            if row not in [0, 1, 2] or col not in [0, 1, 2]:
+                raise ValueError("Row and column must be between 0 and 2.")
+            if board[row][col] != " ":
+                raise ValueError("That position is already taken. Try again.")
+            return row, col
+        except ValueError as e:
+            print(e)
 
-# Function to recognize the song using Shazam
-def recognize_song(file_path):
-    try:
-        shazam = Shazam.from_file(file_path)
-        recognize_generator = shazam.recognizeSong()
-        print("Recognizing song...")
-        result = next(recognize_generator)
-        print("Song recognized:", result['track']['title'], "by", result['track']['subtitle'])
-        speak("Song recognized:" + result['track']['title'] + " by " + result['track']['subtitle'])
-    except Exception as e:
-        print("An error occurred:", str(e))
-        speak("An error occurred while recognizing the song.")
+def get_computer_move(board):
+    # Check if computer can win
+    for i in range(3):
+        for j in range(3):
+            if board[i][j] == " ":
+                board[i][j] = 'O'
+                if check_winner(board, 'O'):
+                    board[i][j] = " "
+                    return i, j
+                board[i][j] = " "
 
-# Main function
-def main():
-    mp3_file_path = record_and_convert_to_mp3()
-    if mp3_file_path:
-        recognize_song(mp3_file_path)
+    # Check if player can win and block
+    for i in range(3):
+        for j in range(3):
+            if board[i][j] == " ":
+                board[i][j] = 'X'
+                if check_winner(board, 'X'):
+                    board[i][j] = "O"
+                    return i, j
+                board[i][j] = " "
 
-if __name__ == "__main__":
-    main()
+    # Otherwise, make a random move
+    empty_cells = [(i, j) for i in range(3) for j in range(3) if board[i][j] == " "]
+    return random.choice(empty_cells)
+
+def play_tic_tac_toe():
+    board = [[" " for _ in range(3)] for _ in range(3)]
+    current_player = "X"
+
+    while True:
+        print_board(board)
+
+        if current_player == "X":
+            row, col = get_user_move(board)
+        else:
+            print("Computer's turn...")
+            row, col = get_computer_move(board)
+
+        board[row][col] = current_player
+
+        if check_winner(board, current_player):
+            print_board(board)
+            if current_player == "X":
+                print("Congratulations! You win!")
+            else:
+                print("Computer wins!")
+            break
+        elif is_board_full(board):
+            print_board(board)
+            print("It's a tie!")
+            break
+
+        current_player = "O" if current_player == "X" else "X"
+
+play_tic_tac_toe()

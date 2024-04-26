@@ -158,9 +158,6 @@ if __name__ == "__main__":
                         elif "pause" in query:
                             pyautogui.press("k")
                             speak("video paused")
-                        elif "play" in query:
-                            pyautogui.press("k")
-                            speak("video played")
                         elif "mute" in query:
                             pyautogui.press("m")
                             speak("video muted")
@@ -428,6 +425,9 @@ if __name__ == "__main__":
                         elif "rock paper scissor" in query:
                             from Game.rockpaperscissors import start_video
                             start_video()
+                        elif "xo" in query:
+                            from Game.ticktaktoe import play_tic_tac_toe
+                            play_tic_tac_toe()
                         elif "shutdown the system" in query:
                             speak("Are You sure you want to shutdown")
                             shutdown = input("Do you wish to shutdown your computer? (yes/no)")
