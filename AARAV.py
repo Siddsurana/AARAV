@@ -425,6 +425,9 @@ if __name__ == "__main__":
                         elif "sheets" in query:
                             from Automation.sheets import sheets
                             sheets()
+                        elif "rock paper scissor" in query:
+                            from Game.rockpaperscissors import start_video
+                            start_video()
                         elif "shutdown the system" in query:
                             speak("Are You sure you want to shutdown")
                             shutdown = input("Do you wish to shutdown your computer? (yes/no)")
