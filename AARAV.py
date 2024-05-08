@@ -14,7 +14,7 @@ import pygetwindow as gw
 from GUI.GUI import GUI
 import psutil
 
-
+ 
 distance_threshold = 0.5  
 
 def initialize_speech_recognition():
@@ -396,7 +396,7 @@ if __name__ == "__main__":
                             query = query.replace("chat", "")
                             from GPT.gpt import start_gpt_prompt
                             start_gpt_prompt(query)
-                        elif "call me" in query:
+                        elif "call me" in query or "call mi" in query:
                             from Call.callme import make_call
                             make_call()
                         elif "call" in query:

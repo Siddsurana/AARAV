@@ -65,8 +65,14 @@ def main():
         detected_objects = ", ".join(set(labels))
         print("Detected objects:", detected_objects)
         speak("Detected objects are "+ detected_objects)
+        
+        # Displaying the frame with detections
+        cv2.imshow('Object Detection', frame)
+        cv2.waitKey(1000)
+        
         if detections:  
             objects_detected = True
+    
 
 
     cap.release()
